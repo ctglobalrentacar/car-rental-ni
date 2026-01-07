@@ -36,6 +36,24 @@ header p {
   margin-top: 10px;
 }
 
+/* Logo */
+.logo-container {
+  display: flex;
+  flex-direction: column; /* Por defecto, logo arriba del texto */
+  align-items: center;
+  gap: 15px; /* Espacio entre logo y texto */
+}
+
+.logo {
+  height: 80px; /* Ajusta según tu diseño */
+  width: auto;  /* Mantiene proporciones */
+}
+@media (max-width: 768px) {
+  .logo {
+    height: 50px;
+  }
+}
+
 /* Navigation */
 nav {
   background: #b71c1c;
@@ -137,3 +155,4 @@ footer {
     flex-direction: column;
   }
 }
+
