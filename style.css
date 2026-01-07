@@ -25,33 +25,27 @@ body {
 header {
   background: #d50000;
   color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-header h1 {
-  font-size: 2.2em;
-}
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
+  padding: 20px 0; /* menos padding para que no se vea gigante */
 }
 
-/* Logo */
+/* Logo y texto en fila */
 .logo-container {
   display: flex;
-  flex-direction: column; /* Por defecto, logo arriba del texto */
-  align-items: center;
-  gap: 15px; /* Espacio entre logo y texto */
+  flex-direction: row;      /* logo a la izquierda, texto a la derecha */
+  align-items: center;      /* centra verticalmente */
+  gap: 20px;                /* espacio entre logo y texto */
+  justify-content: center;  /* centra todo en el header */
 }
 
 .logo {
-  height: 60px; /* Ajusta según tu diseño */
-  width: auto;  /* Mantiene proporciones */
+  height: 80px;   /* ajusta según tu diseño */
+  width: auto;
+  display: block;
 }
-@media (max-width: 1024px) {
-  .logo {
-    height: 60px;
-  }
+
+.logo-container p {
+  margin: 0;
+  font-size: 1.2em;
 }
 
 /* Navigation */
@@ -146,7 +140,22 @@ footer {
 }
 
 /* Responsive */
+@media(max-width: 1024px) {
+  .logo {
+    height: 60px; /* ajusta en tablets */
+  }
+}
+
 @media(max-width: 768px) {
+  /* Header: logo arriba del texto en móvil */
+  .logo-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .logo {
+    height: 50px;
+  }
+
   .car-grid {
     flex-direction: column;
     align-items: center;
@@ -155,5 +164,3 @@ footer {
     flex-direction: column;
   }
 }
-
-
