@@ -128,10 +128,11 @@ section#requisitos h2 {
 .requisitos-list {
   list-style-type: disc; /* o puedes usar check marks con content */
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
   padding-left: 20px;
   font-size: 1.1em;
   line-height: 1.8em;
+  text-align: left; 
 }
 
 /* Reservas */
@@ -186,6 +187,7 @@ footer {
     flex-direction: column;
   }
 }
+
 
 
 
