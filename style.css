@@ -135,6 +135,26 @@ section#requisitos h2 {
   text-align: left; 
 }
 
+/* Beneficios */
+section#beneficios {
+  padding: 50px 0;
+  background: #f0f0f0;
+}
+
+section#beneficios h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.beneficios-list {
+  list-style-type: disc; /* o puedes usar check marks con content */
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 20px;
+  font-size: 1.1em;
+  line-height: 1.8em;
+  text-align: left; 
+}
 /* Reservas */
 section#reserva {
   padding: 50px 0;
@@ -187,6 +207,7 @@ footer {
     flex-direction: column;
   }
 }
+
 
 
 
