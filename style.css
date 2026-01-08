@@ -326,6 +326,49 @@ footer {
   box-shadow: 0 12px 25px rgba(0,0,0,0.4);
 }
 
+/* Premium car cards */
+.car {
+  background: white;
+  border-radius: 20px;
+  width: 260px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+}
+
+.car h3 {
+  margin: 12px 0 8px;
+  font-size: 1.2em;
+}
+
+.car-features {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 0.95em;
+}
+
+.car-features li {
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #d50000;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 0.6em;
+  color: #666;
+}
+
 
 
 
