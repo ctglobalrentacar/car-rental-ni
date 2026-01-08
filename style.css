@@ -328,8 +328,13 @@ footer {
 }
 
 .whatsapp-float img {
-  width: 32px;
+  width: 32px;   /* ajusta según se vea bien */
   height: 32px;
+  display: block;
+  margin: auto;
+  filter: none;  /* o puedes usar filter: brightness(1.2); */
+}
+
 }
 
 
@@ -428,4 +433,5 @@ footer {
     gap: 20px;
   }
 }
+
 
