@@ -1,3 +1,16 @@
+/* =====================
+   Variables de color
+===================== */
+:root {
+  --black-main: #0f0f0f;
+  --black-soft: #1a1a1a;
+  --gold-main: #c9a24d;
+  --gold-dark: #a8842c;
+  --text-light: #f5f5f5;
+  --text-muted: #b5b5b5;
+  --bg-light: #f2f2f2;
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -8,8 +21,8 @@
 /* General */
 body {
   font-family: 'Arial', sans-serif;
-  background: #f9f9f9;
-  color: #333;
+  background: var(--black-main);
+  color: var(--text-light);
   line-height: 1.6;
 }
 
@@ -21,60 +34,70 @@ body {
   padding: 20px 0;
 }
 
-/* Header */
+/* =====================
+   Header
+===================== */
 header {
-  background: #d50000;
-  color: white;
-  padding: 20px 0; /* menos padding para que no se vea gigante */
+  background: var(--black-soft);
+  padding: 20px 0;
 }
 
-/* Logo y texto en fila */
 .logo-container {
   display: flex;
-  flex-direction: row;      /* logo a la izquierda, texto a la derecha */
-  align-items: center;      /* centra verticalmente */
-  gap: 20px;                /* espacio entre logo y texto */
-  justify-content: center;  /* centra todo en el header */
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
 }
 
 .logo {
-  height: 80px;   /* ajusta según tu diseño */
   width: 80px;
-  border-radius: 50%; /* hace el círculo */
-  object-fit: cover;  /* recorta la imagen si no es cuadrada */
-   border: 3px solid white; /* borde blanco alrededor del logo */
-  display: block;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold-main);
 }
 
-.logo-container p {
-  margin: 0;
-  font-size: 1.2em;
+.logo-text h1 {
+  color: var(--gold-main);
+  font-size: 1.8em;
+  letter-spacing: 1px;
 }
 
-/* Navigation */
+.logo-text p {
+  color: var(--text-muted);
+}
+
+/* =====================
+   Navigation
+===================== */
 nav {
-  background: #b71c1c;
+  background: #000;
 }
+
 nav .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 nav a {
-  color: white;
+  color: var(--gold-main);
   margin: 10px 20px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #ffccbc;
+  transition: color 0.3s;
 }
 
-/* Hero / Inicio */
+nav a:hover {
+  color: var(--gold-dark);
+}
+
+/* =====================
+   Hero / Inicio
+===================== */
 #inicio {
-  background: #ffffff;
-  padding: 60px 0;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  padding: 80px 0;
 }
 
 .hero {
@@ -84,252 +107,69 @@ nav a:hover {
   gap: 40px;
 }
 
-.hero-text {
-  flex: 1;
-}
-
 .hero-text h2 {
   font-size: 3em;
-  color: #b71c1c;
+  color: var(--gold-main);
   margin-bottom: 20px;
-  line-height: 1.2;
   font-weight: 800;
-}
-
-.hero-text h2 span {
-  color: #d50000;
 }
 
 .hero-text p {
   font-size: 1.2em;
+  color: var(--text-muted);
   margin-bottom: 25px;
-  color: #555;
-}
-
-.hero-image {
-  flex: 1;
-  text-align: right;
 }
 
 .hero-image img {
   max-width: 100%;
-  height: auto;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image {
-    text-align: center;
-  }
-
-  .hero-text h2 {
-    font-size: 2.2em;
-  }
+/* =====================
+   Botones
+===================== */
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--gold-main);
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-/* Autos */
-section#autos {
-  padding: 40px 0;
+.button:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
 }
-section#autos h2 {
+
+/* =====================
+   Autos
+===================== */
+#autos {
+  background: var(--bg-light);
+  color: #333;
+  padding: 60px 0;
+}
+
+#autos h2 {
   text-align: center;
-  margin-bottom: 30px;
+  color: #000;
+  margin-bottom: 40px;
 }
+
 .car-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
+
 .car {
-  background: white;
-  border-radius: 15px;
-  width: 250px;
-  padding: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-.car:hover {
-  transform: translateY(-5px);
-}
-.car img {
-  width: 100%;
-  border-radius: 10px;
-}
-.button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 12px 20px;
-  background: #d50000;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-.button:hover {
-  background: #b71c1c;
-  transform: scale(1.05);
-}
-/* Requisitos */
-section#requisitos {
-  padding: 50px 0;
-  background: #f0f0f0;
-}
-
-section#requisitos h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.requisitos-list {
-  list-style-type: disc; /* o puedes usar check marks con content */
-  max-width: 600px;
-  margin: 0 auto;
-  padding-left: 20px;
-  font-size: 1.1em;
-  line-height: 1.8em;
-  text-align: left; 
-}
-
-/* Beneficios */
-section#beneficios {
-  padding: 50px 0;
-  background: #f0f0f0;
-}
-
-section#beneficios h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.beneficios-list {
-  list-style-type: disc; /* o puedes usar check marks con content */
-  max-width: 600px;
-  margin: 0 auto;
-  padding-left: 20px;
-  font-size: 1.1em;
-  line-height: 1.8em;
-  text-align: left; 
-}
-/* Reservas */
-section#reserva {
-  padding: 50px 0;
-  background: #f0f0f0;
-}
-section#reserva h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Contacto */
-section#contacto {
-  padding: 50px 0;
-}
-section#contacto h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* Responsive */
-@media(max-width: 1024px) {
-  .logo {
-    height: 60px; /* ajusta en tablets */
-  }
-}
-
-@media(max-width: 768px) {
-  /* Header: logo arriba del texto en móvil */
-  .logo-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .logo {
-    height: 50px;
-  }
-
-  .car-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav .container {
-    flex-direction: column;
-  }
-}
-
-/* Animaciones Hero */
-@keyframes fadeLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hero-text {
-  animation: fadeLeft 1s ease-out;
-}
-
-.hero-image {
-  animation: fadeRight 1.2s ease-out;
-}
-
-/* WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  font-size: 28px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 60px;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  z-index: 1000;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-}
-
-/* Premium car cards */
-.car {
-  background: white;
-  border-radius: 20px;
+  background: #fff;
+  border-radius: 18px;
   width: 260px;
   padding: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
@@ -338,81 +178,94 @@ footer {
 
 .car:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.car img {
+  width: 100%;
+  border-radius: 12px;
 }
 
 .car h3 {
-  margin: 12px 0 8px;
-  font-size: 1.2em;
+  margin: 12px 0;
 }
 
 .car-features {
   list-style: none;
-  padding: 0;
-  margin: 10px 0;
   font-size: 0.95em;
+  margin-bottom: 10px;
 }
 
-.car-features li {
-  margin-bottom: 5px;
-}
-
+/* Precios */
 .price {
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: bold;
-  color: #d50000;
-  margin: 10px 0;
+  color: var(--gold-main);
 }
 
 .price span {
   font-size: 0.6em;
-  color: #666;
+  color: #777;
 }
 
-/* Footer social */
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.social-links a {
-  font-size: 24px;
-  margin: 0 8px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.social-links a:hover {
-  transform: scale(1.2);
-}
-
-
-/* Precio personalizado (sin número) */
-.price-custom {
-  font-size: 1.3em;
-  color: #333;
-  font-weight: 600;
-}
-
-.price-custom span {
-  color: #666;
-  font-size: 0.9em;
-  font-weight: normal;
-}
-
-/* Texto para servicios sin precio fijo */
 .price-note {
   font-size: 1em;
   color: #666;
   margin: 12px 0;
-  font-weight: normal;
+}
+
+/* =====================
+   Requisitos / Beneficios
+===================== */
+#requisitos,
+#beneficios {
+  background: #fff;
+  color: #333;
+  padding: 60px 0;
+}
+
+.requisitos-list,
+.beneficios-list {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1em;
+  line-height: 1.8em;
+}
+
+/* =====================
+   Contacto
+===================== */
+#contacto {
+  background: var(--black-soft);
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contacto h2 {
+  color: var(--gold-main);
+}
+
+#contacto p {
+  color: var(--text-muted);
+}
+
+/* =====================
+   Footer
+===================== */
+footer {
+  background: #000;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  color: var(--text-muted);
 }
 
 .social-icon img {
   width: 26px;
-  height: 26px;
+  margin: 0 10px;
+  filter: brightness(1.1);
   transition: transform 0.3s ease;
 }
 
@@ -420,8 +273,35 @@ footer {
   transform: scale(1.2);
 }
 
+/* =====================
+   WhatsApp Floating
+===================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
 
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 
-
-
-
+  .logo-container {
+    flex-direction: column;
+  }
+}
