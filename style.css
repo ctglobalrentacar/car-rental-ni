@@ -393,3 +393,23 @@ footer {
   font-size: 0.85em;
   color: var(--text-muted);
 }
+
+.requisitos-list li,
+.beneficios-list li {
+  background: var(--bg-light);
+  color: #333;
+  padding: 15px 20px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.requisitos-list li:hover,
+.beneficios-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
