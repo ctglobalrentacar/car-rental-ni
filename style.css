@@ -487,4 +487,20 @@ footer {
   color: #fff;
 }
 
+/* =====================
+   Modal WhatsApp Reservas
+===================== */
+.modal-actions button:first-child {
+  background: #ccc;
+  color: #000;
+}
+
+.modal-actions button:first-child:hover {
+  background: #b5b5b5;
+}
+
+.modal-actions button:last-child:hover {
+  background: #1ebe5d;
+}
+
 
