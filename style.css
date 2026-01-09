@@ -351,7 +351,7 @@ footer {
   height: 32px;
   display: block;
   margin: auto;
-  filter: none;  /* o puedes usar filter: brightness(1.2); */
+  filter: brightness(0) invert(1);  /* o puedes usar filter: brightness(1.2); */
 }
 
 
@@ -538,6 +538,7 @@ footer {
   background: var(--gold-dark);
   transform: translateY(-2px);
 }
+
 
 
 
