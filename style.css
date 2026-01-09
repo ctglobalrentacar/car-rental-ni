@@ -605,6 +605,23 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;  /* pone logo y texto uno debajo del otro */
+    align-items: center;     /* centra todo */
+    text-align: center;      /* centra el texto */
+    gap: 15px;               /* espacio entre logo y texto */
+  }
+
+  .logo-text h1 {
+    font-size: 2em;  /* opcional: reducir tamaño en móvil */
+  }
+
+  .logo-text p {
+    font-size: 1em;  /* opcional: reducir tamaño en móvil */
+  }
+}
+
 
 
 
