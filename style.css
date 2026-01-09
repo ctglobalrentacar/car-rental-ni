@@ -764,6 +764,88 @@ footer {
   }
 }
 
+.hero-section {
+  background: linear-gradient(135deg, #000000, #1a1a1a); /* fondo negro con degradado sutil */
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero-text h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3rem;
+  color: #b68d40; /* dorado */
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.hero-text h2 span {
+  display: block;
+  color: #fff; /* destacar la parte final */
+  font-size: 3.5rem;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  color: #d4d4d4;
+  margin: 20px 0 30px;
+  max-width: 500px;
+}
+
+.hero-text .button {
+  background: linear-gradient(135deg, #b68d40, #c9a24d);
+  color: #000;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(182,141,64,0.6);
+  transition: all 0.3s ease;
+}
+
+.hero-text .button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(182,141,64,0.8);
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 30px 70px rgba(182,141,64,0.7);
+}
+
+/* Grid / Layout */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+  .hero-text h2 span {
+    font-size: 2.5rem;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+}
+
 
 
 
